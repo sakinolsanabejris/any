@@ -35,7 +35,7 @@ func (g *EmailClient) BuyEmail(ClientKey string, Domain string, Host string) (st
 	if err != nil {
 		log.Fatal(err)
 	}
-	if Status.Status == "OK" {
+	if Status.Status == "success" {
 		return Status.EmailId, Status.Email
 	} else {
 		return "NOT_OKAY", "ERROR"
@@ -59,7 +59,7 @@ func (g *EmailClient) DeleteMail(ClientKey string, OrderId int) (string, error) 
 	}
 
 	if resp.StatusCode == http.StatusOK {
-		return "OK", nil
+		return "success", nil
 	} else {
 		return "NOT_OKAY", nil
 	}
