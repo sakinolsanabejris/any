@@ -15,7 +15,7 @@ func (g *EmailClient) BuyEmail(ClientKey string, Domain string, Host string) (st
 
 	client := http.DefaultClient
 
-	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("https://api.anymessage.shop/email/order?token=OKOh6P6sAGYl5BuPel4rAT9hEh6R2VAcn&site=streamlabs.com&domain=gmail.com"), nil)
+	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("https://api.anymessage.shop/email/order?token=OKOh6P6sAGYl5BuPel4rAT9hEh6R2VAc&site=streamlabs.com&domain=gmail.com"), nil)
 	if err != nil {
 		log.Fatal(err)
 	}
