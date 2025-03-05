@@ -48,7 +48,7 @@ func (g *EmailClient) DeleteMail(ClientKey string, OrderId int) (string, error) 
 
 	client := http.DefaultClient
 
-	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("https://api.anymessage.shop/email/cancel?token=OKOh6P6sAGYl5BuPel4rAT9hEh6R2VAcn&id=%v", g.OrderId), nil)
+	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("https://api.anymessage.shop/email/cancel?token=OKOh6P6sAGYl5BuPel4rAT9hEh6R2VAc&id=%v", g.OrderId), nil)
 	if err != nil {
 		log.Fatal(err)
 	}
